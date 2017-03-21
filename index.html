@@ -1,105 +1,20 @@
-<HEAD>
- 
-<SCRIPT LANGUAGE="JavaScript">
-<!-- Original:  Brian Gosselin (bgaudiodr@aol.com) -->
-<!-- Web Site:  http://www.bgaudiodr.iwarp.com -->
- 
-<!-- This script and many more are available free online at -->
-<!-- The JavaScript Source!! http://javascript.internet.com -->
- 
-<!-- Begin
-var isNS = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) >= 4));
-var _all = '';
-var _style = '';
-var wwidth, wheight;
-var ydir = '++';
-var xdir = '++';
-var id1, id2, id3;
-var x = 1;
-var y = 1;
-var x1, y1;
-if(!isNS) {
-_all='all.';
-_style='.style';
-}
-function getwindowsize() {
-clearTimeout(id1);
-clearTimeout(id2);
-clearTimeout(id3);
-if (isNS) {
-wwidth = window.innerWidth - 55;
-wheight = window.innerHeight - 50;
-} else {
-wwidth = document.body.clientWidth - 55;
-wheight = document.body.clientHeight - 50;
-}
-id3 = setTimeout('randomdir()', 20000);
-animate();
-}
-function randomdir() {
-if (Math.floor(Math.random()*2)) {
-(Math.floor(Math.random()*2)) ? xdir='--': xdir='++';
-} else {
-(Math.floor(Math.random()*2)) ? ydir='--': ydir='++';
-}
-id2 = setTimeout('randomdir()', 20000);
-}
-function animate() {
-eval('x'+xdir);
-eval('y'+ydir);
-if (isNS) {
-pic1.moveTo((x+pageXOffset),(y+pageYOffset))
-} else {
-pic1.pixelLeft = x+document.body.scrollLeft;
-pic1.pixelTop = y+document.body.scrollTop;
-}
-if (isNS) {
-if (pic1.top <= 5+pageYOffset) ydir = '++';
-if (pic1.top >= wheight+pageYOffset) ydir = '--';
-if (pic1.left >= wwidth+pageXOffset) xdir = '--';
-if (pic1.left <= 5+pageXOffset) xdir = '++';
-} else {
-if (pic1.pixelTop <= 5+document.body.scrollTop) ydir = '++';
-if (pic1.pixelTop >= wheight+document.body.scrollTop) ydir = '--';
-if (pic1.pixelLeft >= wwidth+document.body.scrollLeft) xdir = '--';
-if (pic1.pixelLeft <= 5+document.body.scrollLeft) xdir = '++';
-}
-id1 = setTimeout('animate()', 30);
-}
-//  End -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <style>
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script>
+	// JavaScript code goes here
 </script>
-</HEAD>
-<BODY OnLoad="getwindowsize()" OnResize="getwindowsize()" background="space.jpg">
- 
-<!-- STEP THREE: Copy this code into the BODY of your HTML document  -->
- 
-<div id="pic1" style="position:absolute; visibility:visible; left:0px; top:0px; z-index:-1">
-<img src="alien.gif" border="0">
-</div>
- 
-<script language="javascript">
-var pic1=eval('document.'+_all+'pic1'+_style);
-</script>
- 
- 
-<p><center>
-<font face="arial, helvetica" size="-2">Free JavaScripts provided<br>
-by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
-</center><p>
- 
-<!-- Script Size:  2.62 KB -->
-   
-<div id="pic1" style="position:absolute; visibility:visible; left:0px; top:0px; z-index:-1">
-<img src="alien.gif" border="0">
-</div>
- 
-<script language="javascript">
-var pic1=eval('document.'+_all+'pic1'+_style);
-</script>
- 
- 
-<p><center>
-<font face="arial, helvetica" size="-2">Free JavaScripts provided<br>
-by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
-</center><p>
- 
+
+</body>
+</html>
