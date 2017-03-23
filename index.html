@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>alex game</title>
+<title>JavaScript Wolfenstein 3D Engine - Textured walls</title>
 <!--
 /*
  * Example code from the article at: http://dev.opera.com/articles/view/creating-pseudo-3d-games-with-html-5-can-1/
@@ -39,8 +39,8 @@ div#ceiling {
 
 #screen {
  position : relative;
- width : 1080px;
- height : 600px;
+ width : 320px;
+ height : 200px;
  border : 1px solid black;
  overflow : hidden;
 }
@@ -109,11 +109,11 @@ var mapHeight = 0;
 
 var miniMapScale = 8;
 
-var screenWidth = 1080;
-var screenHeight = 600;
+var screenWidth = 320;
+var screenHeight = 200;
 
 var stripWidth = 2;
-var fov = 110 * Math.PI / 180;
+var fov = 60 * Math.PI / 180;
 
 var numRays = Math.ceil(screenWidth / stripWidth);
 var fovHalf = fov / 2;
@@ -154,7 +154,10 @@ function initScreen() {
 
 		strip.style.backgroundColor = "magenta";
 
-		
+		var img = new Image();
+		img.src = (window.opera ? "walls_19color.png" : "walls.png");
+		img.style.position = "absolute";
+		img.style.left = "0px";
 
 		strip.appendChild(img);
 		strip.img = img;	// assign the image to a property on the strip element so we have easy access to the image later
@@ -215,7 +218,7 @@ function gameCycle() {
 
 	castRays();
 
-	setTimeout(gameCycle,1000/20); // aim for 30 FPS
+	setTimeout(gameCycle,1000/30); // aim for 30 FPS
 }
 
 
@@ -502,5 +505,6 @@ function drawMiniMap() {
 setTimeout(init, 1);
 
 </script>
+
 
 </body>
