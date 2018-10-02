@@ -1,0 +1,63 @@
+body {
+background:#ADD8E6;
+
+text-align: center;
+color: white
+}
+
+a.menuitem:link {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  color:            rgb(255, 255, 255);
+}
+a.menuitem:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  color:            rgb(255, 255, 255);
+}
+a.menuitem:hover   {
+  /* Applies to links under the pointer */
+  text-decoration: none;
+    color:            #736d8f;
+}
+
+a.menuitem:active   {
+  /* Applies to links under the pointer */
+  text-decoration: bold;
+  background-color: #1183e2;
+  color:            #000000;
+}
+div.mainmenu {
+    text-align: center;
+    color: #FFFFFF;
+    /*font-family: "Share-Techmono", monospace;*/
+    padding-top: 7%;
+    font-size: 2vw;
+    line-height: 40px;
+    left: 50%;
+    text-decoration: none;
+    padding-bottom: 10%;
+}
+div.banner {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 0;
+  margin: 0 auto;
+  z-index: 100;
+  position: relative;
+  top: 2vw;
+}
+a.bannername {
+  font-size: 8vw;
+  text-decoration: none;
+  font-family: "din black";
+  font-style: italic;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  word-spacing: 25vw;
+  line-height: 8vw;
+  transform: translate(-50%, -50%);
+  color: #ffffff
+}
