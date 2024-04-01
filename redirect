@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Page Redirection</title>
+</head>
+<body>
+
+<!-- You can place any content here -->
+
+<script>
+    // Delay in milliseconds before redirecting (e.g., 3000 milliseconds = 3 seconds)
+    const delayInMilliseconds = 3000;
+
+    // URL of the page to redirect to
+    const redirectToURL = "https://en.wikipedia.org/wiki/Buttocks";
+
+    // Function to perform the redirection
+    function redirectToNewPage() {
+        window.location.href = redirectToURL;
+    }
+
+    // Execute the redirection after the specified delay
+    setTimeout(redirectToNewPage, delayInMilliseconds);
+</script>
+
+</body>
+</html>
